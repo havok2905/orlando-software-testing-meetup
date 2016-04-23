@@ -28,6 +28,7 @@ group :development, :test do
   gem 'database_cleaner', '~> 1.5', '>= 1.5.1'
   gem 'dotenv-rails'
   gem 'faker', '~> 1.6', '>= 1.6.3'
+  gem 'simplecov', :require => false
 end
 
 group :development do

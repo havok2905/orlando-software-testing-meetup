@@ -7,6 +7,10 @@
 require 'cucumber/rails'
 require 'factory_girl_rails'
 
+require 'simplecov'
+SimpleCov.command_name 'Cucumber'
+SimpleCov.start 'rails'
+
 FactoryGirl.definition_file_paths = ['spec/support/factories/']
 FactoryGirl.find_definitions
 
