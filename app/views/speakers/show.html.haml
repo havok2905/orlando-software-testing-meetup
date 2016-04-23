@@ -1,0 +1,11 @@
+.admin-page
+  %h2 Speaker
+  %h3= full_name speaker
+  = link_to 'edit', edit_speaker_path(speaker.id)
+  = link_to 'delete', speaker_path(speaker.id), method: :delete
+  %ul
+    %li= speaker.email
+    %li= link_to 'github', speaker.github
+    %li= link_to 'twitter', speaker.twitter
+    %li= "Created At: #{speaker.created_at}"
+    %li= "Updated At: #{speaker.updated_at}"

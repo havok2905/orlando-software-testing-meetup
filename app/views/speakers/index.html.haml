@@ -1,0 +1,30 @@
+.admin-page
+  %h2 Speakers
+  = link_to 'New Speaker', new_speaker_path
+  %table.tables
+    %thead
+      %tr
+        %th{scope: 'col'} ID
+        %th{scope: 'col'} First Name
+        %th{scope: 'col'} Last Name
+        %th{scope: 'col'} Email
+        %th{scope: 'col'} Twitter
+        %th{scope: 'col'} Github
+        %th{scope: 'col'} Created At
+        %th{scope: 'col'} Updated At
+        %th{scope: 'col'}
+    %tbody
+      - speakers.each do |speaker|
+        %tr
+          %td= speaker.id
+          %td= speaker.first_name
+          %td= speaker.last_name
+          %td= speaker.email
+          %td= speaker.twitter
+          %td= speaker.github
+          %td= speaker.created_at
+          %td= speaker.updated_at
+          %td
+            = link_to 'show', speaker_path(speaker.id)
+            = link_to 'edit', edit_speaker_path(speaker.id)
+            = link_to 'delete', speaker_path(speaker.id), method: :delete

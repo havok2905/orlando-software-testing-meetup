@@ -1,0 +1,33 @@
+.admin-page
+  %h2 Events
+  = link_to 'New Event', new_event_path
+  %table.tables
+    %thead
+      %tr
+        %th{scope: 'col'} ID
+        %th{scope: 'col'} Name
+        %th{scope: 'col'} Description
+        %th{scope: 'col'} Link
+        %th{scope: 'col'} Date
+        %th{scope: 'col'} Speakers
+        %th{scope: 'col'} Created At
+        %th{scope: 'col'} Updated At
+        %th{scope: 'col'}
+    %tbody
+      - events.each do |event|
+        %tr
+          %td= event.id
+          %td= event.name
+          %td= event.description
+          %td= event.link
+          %td= event.date
+          %td
+            %ul
+            - event.speakers.each do |speaker|
+              %li= full_name speaker
+          %td= event.created_at
+          %td= event.updated_at
+          %td
+            = link_to 'show', event_path(event.id)
+            = link_to 'edit', edit_event_path(event.id)
+            = link_to 'delete', event_path(event.id), method: :delete

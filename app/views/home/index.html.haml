@@ -1,0 +1,21 @@
+.home-page
+  = render partial: 'refills/hero'
+  %section.last
+    %article
+      %h1 Last Meetup
+      %h2= last_meetup.name
+      %p= last_meetup.date
+      - last_meetup.speakers.each do |speaker|
+        %p= full_name speaker
+      %h3 Description
+      %p= last_meetup.description
+
+  %section.upcoming
+    %article
+      %h1 Next Meetup
+      %h2= upcoming_meetup.name
+      %p= last_meetup.date
+      - upcoming_meetup.speakers.each do |speaker|
+        %p= full_name speaker
+      %h3 Description
+      %p= upcoming_meetup.description

@@ -1,0 +1,22 @@
+.admin-page
+  = form_for event do |f|
+    %fieldset
+      = f.label :name
+      = f.text_field :name
+    %fieldset
+      = f.label :description
+      = f.text_field :description
+    %fieldset
+      = f.label :link
+      = f.text_field :link
+    %fieldset
+      = f.label :date
+      = f.date_field :date
+    %fieldset
+      %p Speakers
+      - speakers_for_events.each do |speaker|
+        %div
+          = check_box_tag :speaker_ids, speaker.id, event.speakers.include?(speaker), name: 'event[speaker_ids][]'
+          = label_tag :speaker_ids, full_name(speaker)
+    %fieldset
+      = f.submit nil

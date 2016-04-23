@@ -1,0 +1,33 @@
+example_id                                            | status | run_time        |
+----------------------------------------------------- | ------ | --------------- |
+./spec/controllers/events_controller_spec.rb[1:4:1]   | passed | 0.06678 seconds |
+./spec/controllers/events_controller_spec.rb[1:4:2]   | passed | 0.06891 seconds |
+./spec/controllers/events_controller_spec.rb[1:4:3]   | passed | 0.04881 seconds |
+./spec/controllers/events_controller_spec.rb[1:4:4]   | passed | 0.04703 seconds |
+./spec/controllers/events_controller_spec.rb[1:6:1]   | passed | 0.07274 seconds |
+./spec/controllers/events_controller_spec.rb[1:6:2]   | passed | 0.05641 seconds |
+./spec/controllers/events_controller_spec.rb[1:6:3]   | passed | 0.06413 seconds |
+./spec/controllers/events_controller_spec.rb[1:6:4]   | passed | 0.06778 seconds |
+./spec/controllers/events_controller_spec.rb[1:7:1]   | passed | 0.07772 seconds |
+./spec/controllers/events_controller_spec.rb[1:7:2]   | passed | 0.0823 seconds  |
+./spec/controllers/events_controller_spec.rb[1:7:3]   | passed | 0.06322 seconds |
+./spec/controllers/events_controller_spec.rb[1:7:4]   | passed | 0.05859 seconds |
+./spec/controllers/speakers_controller_spec.rb[1:4:1] | passed | 0.07254 seconds |
+./spec/controllers/speakers_controller_spec.rb[1:4:2] | passed | 0.05447 seconds |
+./spec/controllers/speakers_controller_spec.rb[1:4:3] | passed | 0.06149 seconds |
+./spec/controllers/speakers_controller_spec.rb[1:4:4] | passed | 0.05584 seconds |
+./spec/controllers/speakers_controller_spec.rb[1:6:1] | passed | 0.07237 seconds |
+./spec/controllers/speakers_controller_spec.rb[1:6:2] | passed | 0.08049 seconds |
+./spec/controllers/speakers_controller_spec.rb[1:6:3] | passed | 0.04922 seconds |
+./spec/controllers/speakers_controller_spec.rb[1:6:4] | passed | 0.05882 seconds |
+./spec/controllers/speakers_controller_spec.rb[1:7:1] | passed | 0.06681 seconds |
+./spec/controllers/speakers_controller_spec.rb[1:7:2] | passed | 0.07275 seconds |
+./spec/controllers/speakers_controller_spec.rb[1:7:3] | passed | 0.06341 seconds |
+./spec/controllers/speakers_controller_spec.rb[1:7:4] | passed | 0.04884 seconds |
+./spec/helpers/user_helper_spec.rb[1:1:1]             | passed | 0.05488 seconds |
+./spec/models/event_speaker_spec.rb[1:1:1]            | passed | 0.05418 seconds |
+./spec/models/event_speaker_spec.rb[1:1:2]            | passed | 0.06327 seconds |
+./spec/models/event_spec.rb[1:1:1]                    | passed | 0.04543 seconds |
+./spec/models/event_spec.rb[1:1:2]                    | passed | 0.06459 seconds |
+./spec/models/speaker_spec.rb[1:1:1]                  | passed | 0.053 seconds   |
+./spec/models/speaker_spec.rb[1:1:2]                  | passed | 0.06243 seconds |

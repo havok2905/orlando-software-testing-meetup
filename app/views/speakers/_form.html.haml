@@ -1,0 +1,18 @@
+= form_for speaker do |f|
+  %fieldset
+    = f.label :first_name
+    = f.text_field :first_name
+  %fieldset
+    = f.label :last_name
+    = f.text_field :last_name
+  %fieldset
+    = f.label :email
+    = f.text_field :email
+  %fieldset
+    = f.label :twitter
+    = f.text_field :twitter
+  %fieldset
+    = f.label :github
+    = f.text_field :github
+  %fieldset
+    = f.submit nil

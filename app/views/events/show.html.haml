@@ -1,0 +1,17 @@
+.admin-page
+  %h2 Event
+  %h3= event.name
+  = link_to 'edit', edit_event_path(event.id)
+  = link_to 'delete', event_path(event.id), method: :delete
+  %ul
+    %li= event.description
+    %li
+      = link_to 'meetup', event.link
+    %li= "Date: #{event.date}"
+    %li= "Created At: #{event.created_at}"
+    %li= "Updated At: #{event.updated_at}"
+
+  %h4 Speakers
+  %ul
+    - event.speakers.each do |speaker|
+      %li= full_name speaker
