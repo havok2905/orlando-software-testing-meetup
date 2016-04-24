@@ -1,8 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe SpeakersController, type: :controller do
-
-  let(:valid_params) {
+  let(:valid_params) do
     {
       speaker: {
         first_name: 'foo',
@@ -12,9 +11,9 @@ RSpec.describe SpeakersController, type: :controller do
         twitter: 'http://www.twitter.com'
       }
     }
-  }
+  end
 
-  let(:invalid_params) { { } }
+  let(:invalid_params) { {} }
 
   describe 'index' do
     # No outgoing messages, state changes, or returns
@@ -59,7 +58,7 @@ RSpec.describe SpeakersController, type: :controller do
     end
 
     it 'should update an event record when valid' do
-      post :update, valid_params.merge({ id: @speaker.id })
+      post :update, valid_params.merge(id: @speaker.id)
       @speaker.reload
 
       expect(@speaker.first_name).to eq valid_params[:speaker][:first_name]
@@ -70,7 +69,7 @@ RSpec.describe SpeakersController, type: :controller do
     end
 
     it 'should create a success message when valid' do
-      post :update, valid_params.merge({ id: @speaker.id })
+      post :update, valid_params.merge(id: @speaker.id)
       expect(flash[:notice]).to be_truthy
     end
 
@@ -79,7 +78,7 @@ RSpec.describe SpeakersController, type: :controller do
     end
 
     it 'should redirect to the speakers page' do
-      post :update, valid_params.merge({ id: @speaker.id })
+      post :update, valid_params.merge(id: @speaker.id)
       expect(response).to redirect_to speakers_path
     end
   end
@@ -90,12 +89,12 @@ RSpec.describe SpeakersController, type: :controller do
     end
 
     it 'should destroy an event' do
-      post :destroy, { id: @speaker.id }
+      post :destroy, id: @speaker.id
       expect(Speaker.count).to eq 0
     end
 
     it 'should create a success message when valid' do
-      post :destroy, { id: @speaker.id }
+      post :destroy, id: @speaker.id
       expect(flash[:notice]).to be_truthy
     end
 
@@ -104,7 +103,7 @@ RSpec.describe SpeakersController, type: :controller do
     end
 
     it 'should redirect to the speakers page' do
-      post :destroy, { id: @speaker.id }
+      post :destroy, id: @speaker.id
       expect(response).to redirect_to speakers_path
     end
   end

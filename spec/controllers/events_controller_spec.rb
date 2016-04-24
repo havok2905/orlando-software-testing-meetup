@@ -1,8 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe EventsController, type: :controller do
-
-  let(:valid_params) {
+  let(:valid_params) do
     {
       event: {
         name: 'foo',
@@ -11,9 +10,9 @@ RSpec.describe EventsController, type: :controller do
         date: Time.zone.now
       }
     }
-  }
+  end
 
-  let(:invalid_params) { { } }
+  let(:invalid_params) { {} }
 
   describe 'index' do
     # No outgoing messages, state changes, or returns
@@ -58,7 +57,7 @@ RSpec.describe EventsController, type: :controller do
     end
 
     it 'should update an event record when valid' do
-      post :update, valid_params.merge({ id: @event.id })
+      post :update, valid_params.merge(id: @event.id)
       @event.reload
 
       expect(@event.name).to eq valid_params[:event][:name]
@@ -68,7 +67,7 @@ RSpec.describe EventsController, type: :controller do
     end
 
     it 'should create a success message when valid' do
-      post :update, valid_params.merge({ id: @event.id })
+      post :update, valid_params.merge(id: @event.id)
       expect(flash[:notice]).to be_truthy
     end
 
@@ -77,7 +76,7 @@ RSpec.describe EventsController, type: :controller do
     end
 
     it 'should redirect to the events page' do
-      post :update, valid_params.merge({ id: @event.id })
+      post :update, valid_params.merge(id: @event.id)
       expect(response).to redirect_to events_path
     end
   end
@@ -88,12 +87,12 @@ RSpec.describe EventsController, type: :controller do
     end
 
     it 'should destroy an event' do
-      post :destroy, { id: @event.id }
+      post :destroy, id: @event.id
       expect(Event.count).to eq 0
     end
 
     it 'should create a success message when valid' do
-      post :destroy, { id: @event.id }
+      post :destroy, id: @event.id
       expect(flash[:notice]).to be_truthy
     end
 
@@ -102,7 +101,7 @@ RSpec.describe EventsController, type: :controller do
     end
 
     it 'should redirect to the events page' do
-      post :destroy, { id: @event.id }
+      post :destroy, id: @event.id
       expect(response).to redirect_to events_path
     end
   end
